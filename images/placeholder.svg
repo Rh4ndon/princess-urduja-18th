@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" role="img" aria-label="18th birthday">
+  <rect width="300" height="400" fill="#f5ebe0"/>
+  <ellipse cx="150" cy="180" rx="70" ry="65" fill="#e8b4c4" opacity="0.6"/>
+  <text x="150" y="195" text-anchor="middle" fill="#b07a8a" font-family="Georgia, serif" font-size="56" font-style="italic">18</text>
+  <text x="150" y="240" text-anchor="middle" fill="#8a9f8a" font-family="Georgia, serif" font-size="14" letter-spacing="3">BIRTHDAY</text>
+</svg>

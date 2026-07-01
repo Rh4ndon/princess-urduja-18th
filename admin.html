@@ -3,25 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RSVP Admin — 18th Birthday</title>
+  <title>RSVP Admin — Princess Urduja Vercaza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Lato:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="admin-page">
-  <div class="bg-shapes" aria-hidden="true">
-    <span class="shape shape-1"></span>
-    <span class="shape shape-2"></span>
-  </div>
-
   <main class="container">
     <header class="hero hero-compact">
-      <p class="eyebrow">Admin</p>
-      <h1>RSVP Dashboard</h1>
+      <p class="eyebrow script">Admin</p>
+      <h1 class="script hero-title">RSVP Dashboard</h1>
       <p class="subtitle">View responses from your Google Sheet</p>
     </header>
 
     <!-- Login gate -->
     <section class="card" id="login-section">
-      <h2>Enter admin key</h2>
+      <h2 class="script section-title">Enter admin key</h2>
       <p class="hint">Use the same key you set in your Google Apps Script.</p>
       <form id="login-form">
         <div class="field">
@@ -56,7 +54,7 @@
 
       <section class="card">
         <div class="table-header">
-          <h2>All responses</h2>
+          <h2 class="script section-title">All responses</h2>
           <button type="button" class="btn btn-secondary btn-sm" id="refresh-btn">Refresh</button>
         </div>
 

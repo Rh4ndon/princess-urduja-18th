@@ -8,8 +8,9 @@ const CONFIG = {
 
   // Event details shown on the RSVP page (edit in index.html too if you prefer)
   EVENT: {
-    date: 'Saturday, August 15, 2026',
-    time: '6:00 PM',
-    venue: 'The Garden Pavilion',
+    date: 'Saturday, August 08, 2026',
+    time: '3:00 PM',
+    venue: "Daisylene's Reception Hall",
+    iso: '2026-08-08T15:00:00',
   },
 };
