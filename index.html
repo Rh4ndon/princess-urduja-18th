@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>18th Birthday RSVP</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="bg-shapes" aria-hidden="true">
+    <span class="shape shape-1"></span>
+    <span class="shape shape-2"></span>
+    <span class="shape shape-3"></span>
+  </div>
+
+  <main class="container">
+    <header class="hero">
+      <p class="eyebrow">You're invited</p>
+      <h1>Join us for my <span class="highlight">18th Birthday</span></h1>
+      <p class="subtitle">Please let us know if you can make it. We can't wait to celebrate with you!</p>
+      <div class="event-details">
+        <div class="detail">
+          <span class="detail-label">Date</span>
+          <span class="detail-value" id="event-date">Saturday, August 15, 2026</span>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Time</span>
+          <span class="detail-value" id="event-time">6:00 PM</span>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Venue</span>
+          <span class="detail-value" id="event-venue">The Garden Pavilion</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="card" id="rsvp-form-section">
+      <h2>RSVP</h2>
+      <form id="rsvp-form" novalidate>
+        <div class="field">
+          <label for="name">Full name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name">
+        </div>
+
+        <div class="field">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="you@email.com" autocomplete="email">
+        </div>
+
+        <fieldset class="field">
+          <legend>Will you attend? <span class="required">*</span></legend>
+          <div class="radio-group">
+            <label class="radio-card">
+              <input type="radio" name="attending" value="yes" required>
+              <span class="radio-label">Yes, I'll be there!</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="attending" value="no">
+              <span class="radio-label">Sorry, can't make it</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="field" id="guests-field">
+          <label for="guests">Number of guests (including you)</label>
+          <select id="guests" name="guests">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5+</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message">Message (optional)</label>
+          <textarea id="message" name="message" rows="3" placeholder="Dietary needs, song requests, or a note..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="submit-btn">
+          <span class="btn-text">Send RSVP</span>
+          <span class="btn-loading" hidden>Sending...</span>
+        </button>
+      </form>
+
+      <div id="success-message" class="message success" hidden>
+        <h3>Thank you!</h3>
+        <p>Your RSVP has been received. See you at the party!</p>
+      </div>
+
+      <div id="error-message" class="message error" hidden>
+        <h3>Something went wrong</h3>
+        <p id="error-text">Please try again in a moment.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a href="admin.html" class="admin-link">Admin</a>
+    </footer>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

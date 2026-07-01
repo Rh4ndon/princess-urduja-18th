@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP Admin — 18th Birthday</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="admin-page">
+  <div class="bg-shapes" aria-hidden="true">
+    <span class="shape shape-1"></span>
+    <span class="shape shape-2"></span>
+  </div>
+
+  <main class="container">
+    <header class="hero hero-compact">
+      <p class="eyebrow">Admin</p>
+      <h1>RSVP Dashboard</h1>
+      <p class="subtitle">View responses from your Google Sheet</p>
+    </header>
+
+    <!-- Login gate -->
+    <section class="card" id="login-section">
+      <h2>Enter admin key</h2>
+      <p class="hint">Use the same key you set in your Google Apps Script.</p>
+      <form id="login-form">
+        <div class="field">
+          <label for="admin-key">Admin key</label>
+          <input type="password" id="admin-key" required placeholder="Your secret key" autocomplete="current-password">
+        </div>
+        <button type="submit" class="btn btn-primary">View RSVPs</button>
+      </form>
+      <p id="login-error" class="inline-error" hidden>Invalid key or connection failed.</p>
+    </section>
+
+    <!-- Dashboard -->
+    <section id="dashboard" hidden>
+      <div class="stats-grid" id="stats-grid">
+        <div class="stat-card">
+          <span class="stat-value" id="stat-total">—</span>
+          <span class="stat-label">Total RSVPs</span>
+        </div>
+        <div class="stat-card stat-yes">
+          <span class="stat-value" id="stat-yes">—</span>
+          <span class="stat-label">Attending</span>
+        </div>
+        <div class="stat-card stat-no">
+          <span class="stat-value" id="stat-no">—</span>
+          <span class="stat-label">Not attending</span>
+        </div>
+        <div class="stat-card stat-guests">
+          <span class="stat-value" id="stat-guests">—</span>
+          <span class="stat-label">Total guests</span>
+        </div>
+      </div>
+
+      <section class="card">
+        <div class="table-header">
+          <h2>All responses</h2>
+          <button type="button" class="btn btn-secondary btn-sm" id="refresh-btn">Refresh</button>
+        </div>
+
+        <div id="loading" class="loading" hidden>Loading...</div>
+        <div id="table-error" class="message error" hidden>
+          <p id="table-error-text">Failed to load data.</p>
+        </div>
+
+        <div class="table-wrap" id="table-wrap" hidden>
+          <table class="rsvp-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Attending</th>
+                <th>Guests</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tbody id="rsvp-tbody"></tbody>
+          </table>
+        </div>
+
+        <p id="empty-state" class="empty-state" hidden>No RSVPs yet.</p>
+      </section>
+
+      <button type="button" class="btn btn-ghost" id="logout-btn">Log out</button>
+    </section>
+
+    <footer class="footer">
+      <a href="index.html" class="admin-link">← Back to RSVP</a>
+    </footer>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
