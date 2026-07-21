@@ -6,6 +6,9 @@ const CONFIG = {
   // Your deployed Google Apps Script Web App URL (ends with /exec)
   SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyW8d-XmGoB7N7nNQUzJI6ppCouBwtWxUCxd7mFY3YTYLLKMmzZXEuANUkQKcTYlZC6/exec',
 
+  // Your program / entourage Google Apps Script Web App URL
+  PROGRAM_URL: 'https://script.google.com/macros/s/AKfycbxBI5EFJ_bLGipxXhcrKN0PN2QCxpLol100AkvKfvmfyGMXrL8mau1JCrdW8fWtl1AHkQ/exec',
+
   // Event details shown on the RSVP page (edit in index.html too if you prefer)
   EVENT: {
     date: 'Saturday, August 08, 2026',

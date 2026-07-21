@@ -234,6 +234,22 @@ body {
   background: var(--card-warm);
 }
 
+.arch-frame-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 90px 90px 4px 4px;
+  overflow: hidden;
+  background: var(--card-warm);
+}
+
+.arch-frame-content .floral-silhouette {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 /* ── Content sections ── */
 
 .invite-message {
@@ -919,3 +935,146 @@ fieldset.field {
 .index-body .invite-card-body {
   flex: 1;
 }
+
+/* ── Program Flow ── */
+
+.program-section {
+  text-align: left;
+}
+
+.program-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.program-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.program-item:last-child {
+  border-bottom: none;
+}
+
+.program-num {
+  flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--pink-light);
+  border-radius: 50%;
+}
+
+.program-label {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+/* ── 18 Tables Grid ── */
+
+.tables-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 480px) {
+  .tables-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.table-card {
+  background: var(--card-warm);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.table-card-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+  color: var(--pink);
+  text-align: center;
+}
+
+.table-names {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.table-names li {
+  padding: 0.3rem 0;
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--text);
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.table-names li:last-child {
+  border-bottom: none;
+}
+
+/* ── Floral Silhouette ── */
+
+.floral-silhouette {
+  color: var(--pink);
+  padding: 1.5rem 0.5rem;
+  animation: floral-glow 3s ease-in-out infinite;
+}
+
+@keyframes floral-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(212, 137, 154, 0.25));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(212, 137, 154, 0.55));
+  }
+}
+
+/* ── Dress Code ── */
+
+.dress-section {
+  text-align: center;
+}
+
+.dress-hint {
+  margin: -0.5rem 0 1rem;
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.dress-rings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dress-ring {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  margin-left: -10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.dress-ring:first-child {
+  margin-left: 0;
+}
+
