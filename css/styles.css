@@ -91,6 +91,7 @@ body {
 .invite-section {
   padding: 1rem 0;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .venue-section {
@@ -143,6 +144,7 @@ body {
 .hero {
   text-align: center;
   margin-bottom: 0.25rem;
+  margin-top: 0.5rem;
 }
 
 .date-stack {
@@ -175,7 +177,7 @@ body {
 
 .hero-name {
   margin: 0 0 0.35rem;
-  font-size: clamp(2.4rem, 9vw, 3.4rem);
+  font-size: clamp(3.4rem, 12vw, 3.4rem);
   line-height: 1.1;
   color: var(--pink);
 }
