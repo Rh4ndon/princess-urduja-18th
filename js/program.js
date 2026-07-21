@@ -10,6 +10,8 @@
   fetch(PROGRAM_URL + '?action=getProgram')
     .then(function (r) { return r.json(); })
     .then(function (res) {
+      stopLoading();
+
       if (!res.success || !res.data.length) {
         document.getElementById('program-section').hidden = true;
         document.getElementById('tables-section').hidden = true;
@@ -20,9 +22,22 @@
       renderTables(res.data);
     })
     .catch(function () {
+      stopLoading();
       document.getElementById('program-section').hidden = true;
       document.getElementById('tables-section').hidden = true;
     });
+
+  function stopLoading() {
+    var p = document.getElementById('program-loading');
+    var t = document.getElementById('tables-loading');
+    if (p) p.hidden = true;
+    if (t) t.hidden = true;
+  }
+
+  function hideLoading(id) {
+    var el = document.getElementById(id);
+    if (el) el.hidden = true;
+  }
 
   function renderProgram(rows) {
     var list = document.getElementById('program-timeline');
