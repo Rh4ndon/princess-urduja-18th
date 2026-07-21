@@ -5,8 +5,9 @@
  * 1. Create a Google Sheet
  * 2. Extensions → Apps Script → paste this file
  * 3. Set ADMIN_KEY below to a secret password
- * 4. Deploy → New deployment → Web app
- * 5. Copy the /exec URL into js/config.js
+ * 4. (Important) File → Project properties → Time zone → Asia/Manila
+ * 5. Deploy → New deployment → Web app
+ * 6. Copy the /exec URL into js/config.js
  */
 
 const ADMIN_KEY = 'change-me-to-a-secret-key';

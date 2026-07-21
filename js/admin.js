@@ -112,7 +112,7 @@
       const tr = document.createElement('tr');
       const attending = row.attending === 'yes';
       tr.innerHTML = `
-        <td>${escapeHtml(row.timestamp)}</td>
+        <td>${formatPHTime(row.timestamp)}</td>
         <td>${escapeHtml(row.name)}</td>
         <td>${escapeHtml(row.email)}</td>
         <td><span class="badge ${attending ? 'badge-yes' : 'badge-no'}">${attending ? 'Yes' : 'No'}</span></td>
@@ -130,6 +130,18 @@
 
   function hideTableError() {
     tableError.hidden = true;
+  }
+
+  function formatPHTime(ts) {
+    if (!ts) return '—';
+    var d = new Date(ts);
+    if (isNaN(d.getTime())) return escapeHtml(ts);
+    var options = {
+      year: 'numeric', month: 'short', day: 'numeric',
+      hour: 'numeric', minute: '2-digit', hour12: true,
+      timeZone: 'Asia/Manila'
+    };
+    return d.toLocaleDateString('en-PH', options);
   }
 
   function escapeHtml(str) {
